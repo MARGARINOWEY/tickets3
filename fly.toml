@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for tickets2023 on 2023-05-15T15:04:48-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "tickets2023"
+primary_region = "gru"
+
+[env]
+  JAVA_OPTS = "-XX:MaxRAM=70m"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
